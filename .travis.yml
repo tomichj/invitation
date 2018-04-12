@@ -6,6 +6,7 @@ language:
 rvm:
   - 2.2.2
   - 2.3.3
+  - 2.5.1
 
 #branches:
 #  only:

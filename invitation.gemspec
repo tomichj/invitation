@@ -17,11 +17,11 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '>= 4.0', '< 5.2'
+  s.add_dependency 'rails', '>= 4.0', '<= 5.2'
 
   s.add_development_dependency 'factory_bot', '~> 4.8'
-  s.add_development_dependency 'rspec-rails', '~> 3.5'
-  s.add_development_dependency 'rspec-mocks', '~> 3.5'
+  s.add_development_dependency 'rspec-rails', '~> 3.7'
+  s.add_development_dependency 'rspec-mocks', '~> 3.7'
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'shoulda-matchers'
