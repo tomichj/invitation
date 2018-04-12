@@ -12,12 +12,12 @@ require 'rspec/rails'
 require 'shoulda-matchers'
 require 'capybara/rails'
 require 'capybara/rspec'
-require 'factory_girl'
+require 'factory_bot'
 require 'timecop'
 
 Rails.backtrace_cleaner.remove_silencers!
 
-# Load factory girl factories.
+# Load factory bot factories.
 Dir[File.join(File.dirname(__FILE__), 'factories/**/*.rb')].each { |f| require f }
 
 # Build test database in spec/dummmy/db/
@@ -32,7 +32,7 @@ if ActiveRecord::VERSION::STRING >= '4.2' && ActiveRecord::VERSION::STRING < '5.
 end
 
 RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.infer_spec_type_from_file_location!
   config.order = :random
   config.use_transactional_fixtures = true

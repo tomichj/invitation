@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '>= 4.0', '< 5.2'
 
-  s.add_development_dependency 'factory_girl', '~> 4.8'
+  s.add_development_dependency 'factory_bot', '~> 4.8'
   s.add_development_dependency 'rspec-rails', '~> 3.5'
   s.add_development_dependency 'rspec-mocks', '~> 3.5'
   s.add_development_dependency 'pry', '~> 0.10'
