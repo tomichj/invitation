@@ -6,6 +6,7 @@ language:
 rvm:
   - 2.2.2
   - 2.3.3
+  - 2.5.1
 
 #branches:
 #  only:
@@ -14,6 +15,12 @@ rvm:
 gemfile:
   - gemfiles/4.2.gemfile
   - gemfiles/5.0.gemfile
+  - gemfiles/5.2.gemfile
+
+before_install:
+  - gem update --system
+  - gem --version
+  - gem install bundler
 
 #install:
 #  - 'bin/setup'
