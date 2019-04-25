@@ -14,7 +14,7 @@ class Invite < ActiveRecord::Base
   end
 
   before_create :generate_token
-  before_save :set_email_case, on: :create
+  before_save :set_email_case, if: :email_changed?
   before_save :check_recipient_existence
 
   validates :email, presence: true
