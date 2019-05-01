@@ -1,6 +1,16 @@
 # Invitation Changelog
 
 
+## [0.6.0] - May 1, 2019
+
+### Feature: support for rails 6.0
+- added Appraisal entry and gemfile for 6.0.0rc1
+- bumped gemspec to include rails 6.0.0rc1
+- bumped version
+
+[0.6.0]: https://github.com/tomichj/invitation/compare/0.5.1...0.6.0
+
+
 ## [0.5.1] - June 7, 2018
 
 ### Feature: support for rails 5.2
