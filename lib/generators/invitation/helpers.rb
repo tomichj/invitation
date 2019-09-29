@@ -69,9 +69,13 @@ module Invitation
         end.join('::')
       end
 
+      def rails5_and_up?
+        Rails::VERSION::MAJOR >= 5
+      end
+
       def migration_version
-        if Rails.version.start_with? '5'
-          "[#{ActiveRecord::Migration.current_version}]"
+        if rails5_and_up?
+          "[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]"
         end
       end
     end
