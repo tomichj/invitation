@@ -16,7 +16,7 @@ gemfile:
   - gemfiles/4.2.gemfile
   - gemfiles/5.0.gemfile
   - gemfiles/5.2.gemfile
-  - gemfiles/6.0.0rc1.gemfile
+  - gemfiles/6.0.gemfile
 
 #install:
 #  - 'bin/setup'

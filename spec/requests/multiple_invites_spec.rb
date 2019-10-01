@@ -20,7 +20,7 @@ describe 'api' do
     it 'returns json' do
       sign_in_with @user
       subject
-      expect(response.content_type).to eq('application/json')
+      expect(safe_mime_type(response)).to eq('application/json')
     end
 
     it 'returns success' do

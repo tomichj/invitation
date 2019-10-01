@@ -69,3 +69,12 @@ def do_post(path, *args)
     post path, *(args.collect{|i| i.values}.flatten)
   end
 end
+
+# Accessing mime type from the response changes in Rails 6.
+def safe_mime_type(response)
+  if Rails::VERSION::MAJOR >= 6
+    response.media_type
+  else
+    response.content_type
+  end
+end
