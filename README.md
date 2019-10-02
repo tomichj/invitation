@@ -359,6 +359,8 @@ Many thanks to:
 
 ## Future changes
 
+Possible future changes, some of which may be breaking:
+
 * accepted flag, so we can scope invites by accepted vs not yet accepted
 * expiration date - invites expire, scope expired by not expired
 * move all view text to locale

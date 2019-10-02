@@ -14,12 +14,12 @@ Gem::Specification.new do |s|
   s.description = 'Allow users to invite other users to join your organization'
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '>= 4.0', '<= 6.0'
+  s.add_dependency 'rails', '>= 4.0'
 
-  s.add_development_dependency 'factory_girl', '~> 4.8'
+  s.add_development_dependency 'factory_bot', '~> 4.11.1'
   s.add_development_dependency 'rspec-rails', '~> 3.5'
   s.add_development_dependency 'rspec-mocks', '~> 3.5'
   s.add_development_dependency 'pry', '~> 0.10'

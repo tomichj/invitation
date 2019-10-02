@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :invite do
     trait :recipient_is_existing_user do
       email { create(:user).email }

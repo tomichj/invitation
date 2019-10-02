@@ -1,6 +1,17 @@
 # Invitation Changelog
 
 
+## [0.6.1] - October 1, 2019
+
+### Fix: generator support for rails 6.0
+- fixed migration_version in generators to support rails 5 and above
+- Appraisal entry and gemfile for Rails 6.0.0
+- bumped gemspec to include rails 6.0.0
+- switched from factory_girl to factory_bot
+
+[0.6.0]: https://github.com/tomichj/invitation/compare/0.6.0...0.6.1
+
+
 ## [0.6.0] - May 1, 2019
 
 ### Feature: support for rails 6.0
