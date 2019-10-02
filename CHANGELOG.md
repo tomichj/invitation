@@ -9,7 +9,7 @@
 - bumped gemspec to include rails 6.0.0
 - switched from factory_girl to factory_bot
 
-[0.6.0]: https://github.com/tomichj/invitation/compare/0.6.0...0.6.1
+[0.6.1]: https://github.com/tomichj/invitation/compare/0.6.0...0.6.1
 
 
 ## [0.6.0] - May 1, 2019
