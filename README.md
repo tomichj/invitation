@@ -342,7 +342,7 @@ See [config/locales/invitation.en.yml](/config/locales/invitation.en.yml) for th
 ## Thanks
 
 This gem was inspired by and draws heavily from:
-* https://gist.github.com/jlegosama/9026919
+* https://gist.github.com/bigglesrocks/9026919
 
 With additional inspiration from:
 * https://github.com/scambra/devise_invitable
