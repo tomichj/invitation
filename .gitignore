@@ -9,3 +9,5 @@ spec/dummy/tmp/
 spec/dummy/.sass-cache
 /.idea/
 *emfile.lock
+.byebug_history
+```
