@@ -14,6 +14,7 @@ require 'capybara/rails'
 require 'capybara/rspec'
 require 'factory_girl'
 require 'timecop'
+require 'byebug'
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -64,7 +65,8 @@ end
 #
 def do_post(path, *args)
   if Rails::VERSION::MAJOR >= 5
-    post path, *args
+    # byebug
+    post path, **args.first
   else
     post path, *(args.collect{|i| i.values}.flatten)
   end

@@ -17,11 +17,11 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '~> 5.2', '>= 5.2.4.2'
+  s.add_dependency 'rails', '~> 6.0.2', '>= 6.0.2'
 
   s.add_development_dependency 'factory_girl', '~> 4.8'
-  s.add_development_dependency 'rspec-rails', '~> 3.5'
-  s.add_development_dependency 'rspec-mocks', '~> 3.5'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rspec-mocks'
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'shoulda-matchers'
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'appraisal'
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'byebug'
 
   s.required_ruby_version = Gem::Requirement.new('>= 2.0')
 end
