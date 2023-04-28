@@ -1,0 +1,40 @@
+version: 2.0
+
+jobs:
+  "ruby-3.0.0":
+    docker:
+      - image: circleci/ruby:3.0.0
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-bundle-{{ .Branch }}-{{ checksum "invitation.gemspec" }}
+            - v1-bundle-{{ .Branch }}
+      - run:
+          name: Upgrade Bundler
+          command: gem install --no-doc bundler -v "$(grep bundler *.gemspec | awk '{print $NF}' | tr -d \' )"
+      - run:
+          name: Bundle Install
+          command: bundle install
+      - save_cache:
+          key: v1-bundle-{{ .Branch }}-{{ checksum "invitation.gemspec" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Run rspec in parallel
+          command: |
+            bundle exec rspec --profile 10 \
+                              --out test_results/rspec.xml \
+                              --format progress
+      - store_test_results:
+          path: test_results
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - "ruby-3.0.0"
