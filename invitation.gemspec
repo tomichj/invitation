@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails', '~> 6.0.2', '>= 6.0.2'
-
+  
   s.add_development_dependency 'factory_girl', '~> 4.8'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'rspec-mocks'
