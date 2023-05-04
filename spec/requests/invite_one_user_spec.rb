@@ -9,18 +9,18 @@ describe 'api' do
 
   context 'invite a new user' do
     let(:email) { 'gug@gug.com' }
-    subject {
+    subject do
       do_post invites_path,
-           params: { invite: { invitable_id: @company.id,
-                               invitable_type: @company.class.name,
-                               email: email } },
-           **json_headers()
-    }
+              params: { invite: { invitable_id: @company.id,
+                                  invitable_type: @company.class.name,
+                                  email: email } },
+              **json_headers
+    end
 
     it 'returns json' do
       sign_in_with @user
       subject
-      expect(response.content_type).to eq('application/json')
+      expect(response.content_type).to eq('application/json; charset=utf-8')
     end
 
     it 'returns success' do
@@ -45,7 +45,5 @@ describe 'api' do
       expect(invite['invitable_id']).to eq @company.id
       expect(invite['invitable_type']).to eq @company.class.name
     end
-
   end
 end
-

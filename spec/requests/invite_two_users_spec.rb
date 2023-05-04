@@ -12,16 +12,16 @@ describe 'api' do
     let(:email2) { 'gug2@gug.com' }
     subject do
       do_post invites_path,
-           params: { invite: { invitable_id: @company.id,
-                               invitable_type: @company.class.name,
-                               emails: [email1, email2] } },
-           **json_headers()
+              params: { invite: { invitable_id: @company.id,
+                                  invitable_type: @company.class.name,
+                                  emails: [email1, email2] } },
+              **json_headers
     end
 
     it 'returns json' do
       sign_in_with @user
       subject
-      expect(response.content_type).to eq('application/json')
+      expect(response.content_type).to eq('application/json; charset=utf-8')
     end
 
     it 'responds with success' do

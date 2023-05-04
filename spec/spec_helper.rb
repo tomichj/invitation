@@ -1,12 +1,10 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 ENV['RAILS_ENV'] ||= 'test'
 
-require File.expand_path('../dummy/config/environment.rb', __FILE__)
+require File.expand_path('dummy/config/environment.rb', __dir__)
 
 # nasty hacky catch of environment data wiped out by tests run in rails 4 via appraisal
-if ActiveRecord::VERSION::STRING >= '5.0'
-  system('bin/rails dummy:db:environment:set RAILS_ENV=test')
-end
+system('bin/rails dummy:db:environment:set RAILS_ENV=test') if ActiveRecord::VERSION::STRING >= '5.0'
 
 require 'rspec/rails'
 require 'shoulda-matchers'
@@ -68,6 +66,6 @@ def do_post(path, *args)
     # byebug
     post path, **args.first
   else
-    post path, *(args.collect{|i| i.values}.flatten)
+    post path, *args.collect { |i| i.values }.flatten
   end
 end

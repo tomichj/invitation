@@ -1,5 +1,5 @@
 require 'English'
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 require 'invitation/version'
 require 'date'
@@ -17,21 +17,21 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '~> 6.0.2', '>= 6.0.2'
-  
-  s.add_development_dependency 'factory_girl', '~> 4.8'
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'rspec-mocks'
-  s.add_development_dependency 'pry', '~> 0.10'
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'shoulda-matchers'
+  s.add_dependency 'rails', '~> 7.0.4.3', '< 8.0'
+
+  s.add_development_dependency 'appraisal'
+  s.add_development_dependency 'bundler', '~> 2.4', '>= 2.4.12'
+  s.add_development_dependency 'byebug'
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'timecop'
-  s.add_development_dependency 'appraisal'
-  s.add_development_dependency 'bundler', '~> 2.2.32'
+  s.add_development_dependency 'factory_girl', '~> 4.8'
+  s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'byebug'
+  s.add_development_dependency 'rspec-mocks'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'shoulda-matchers'
+  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'timecop'
 
   s.required_ruby_version = Gem::Requirement.new('>= 2.0')
 end
